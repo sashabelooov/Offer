@@ -130,11 +130,18 @@ async def conf(message: Message, state: FSMContext):
          sheet = client.open("telegram_bot_status_sheet").sheet1
          hozir = datetime.now()
 
-         sana = hozir.date()
-         vaqt = hozir.strftime("%H:%M:%S")
-         url = f"https://t.me/{phone}"
-         row = [url, phone, name, user_problem, sana, vaqt]
-         sheet.append_row(row)
+         # sana = hozir.date()
+         # vaqt = hozir.strftime("%H:%M:%S")
+         # url = f"https://t.me/{phone}"
+         # row = [url, phone, name, user_problem, sana, vaqt]
+         # sheet.append_row(row)
+         # hozir = datetime.now()
+        url = f"https://t.me/{phone}"
+        sana = hozir.strftime("%Y-%m-%d")      # '2025-07-31' formatida
+        vaqt = hozir.strftime("%H:%M:%S")      # '15:56:22' formatida
+        
+        row = [url, phone, name, user_problem, sana, vaqt]
+        sheet.append_row(row)
 
          await message.answer(
              text=get_text(lang, "message_text", "issue_received"),
