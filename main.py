@@ -4,6 +4,7 @@ from aiogram.types import  Message
 from aiogram.fsm.context import FSMContext
 from aiogram.types import ReplyKeyboardRemove
 from decouple import config
+from datetime import datetime
 
 # local modules
 from state import UserState
@@ -127,9 +128,12 @@ async def conf(message: Message, state: FSMContext):
 
          # Sheets faylini ochish
          sheet = client.open("telegram_bot_status_sheet").sheet1
+         hozir = datetime.now()
 
+         sana = hozir.date()
+         vaqt = hozir.strftime("%H:%M:%S")
          url = f"https://t.me/{phone}"
-         row = [url, phone, name, user_problem]
+         row = [url, phone, name, user_problem, sana, vaqt]
          sheet.append_row(row)
 
          await message.answer(
