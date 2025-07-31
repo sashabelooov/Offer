@@ -122,7 +122,7 @@ async def conf(message: Message, state: FSMContext):
         creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
         client = gspread.authorize(creds)
 
-        sheet = client.open("Volna_Shikoyatlar_Takliflar").sheet1
+        sheet = client.open("Volna Taklif va Shikoyatlar").sheet1
         hozir = datetime.now()
 
         url = f"https://t.me/{phone}"
