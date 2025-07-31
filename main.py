@@ -115,7 +115,6 @@ async def conf(message: Message, state: FSMContext):
         name = data["user_name"]
         user_problem = data["problem"]
 
-        # Google Sheets API bilan ulanish
         scope = [
             "https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/drive"
@@ -123,16 +122,9 @@ async def conf(message: Message, state: FSMContext):
         creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
         client = gspread.authorize(creds)
 
-        # Sheets faylini ochish
-        sheet = client.open("telegram_bot_status_sheet").sheet1
+        sheet = client.open("telegram_bot").sheet1
         hozir = datetime.now()
 
-        # sana = hozir.date()
-        # vaqt = hozir.strftime("%H:%M:%S")
-        # url = f"https://t.me/{phone}"
-        # row = [url, phone, name, user_problem, sana, vaqt]
-        # sheet.append_row(row)
-        # hozir = datetime.now()
         url = f"https://t.me/{phone}"
         sana = hozir.strftime("%Y-%m-%d")  # '2025-07-31' formatida
         vaqt = hozir.strftime("%H:%M:%S")  # '15:56:22' formatida
