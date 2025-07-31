@@ -10,6 +10,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./bot:/app
+      - .:/app
     working_dir: /app
     command: python runbot.py
