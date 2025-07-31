@@ -5,6 +5,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.types import ReplyKeyboardRemove
 from decouple import config
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 # local modules
 from state import UserState
@@ -123,7 +124,7 @@ async def conf(message: Message, state: FSMContext):
         client = gspread.authorize(creds)
 
         sheet = client.open("Volna_Shikoyatlar_Takliflar").sheet1
-        hozir = datetime.now()
+        hozir = datetime.now(ZoneInfo("Asia/Tashkent"))
 
         url = f"https://t.me/{phone}"
         sana = hozir.strftime("%Y-%m-%d")  # '2025-07-31' formatida
