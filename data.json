@@ -1,0 +1,66 @@
+{
+    "start": "Hello! 👋 Welcome to our Support Bot.\nYou can send your issues here, and we will process them as soon as possible.\n\nAssalomu alaykum! 👋 Bu muammolaringizni qabul qiluvchi bot.\nMuammoingizni yozing, biz uni tezda ko‘rib chiqamiz.\n\nЗдравствуйте! 👋 Это бот для приема ваших обращений.\nОпишите свою проблему, и мы рассмотрим ее как можно скорее.",
+    "\uD83C\uDDFA\uD83C\uDDFF uz":{
+          "message_text": {
+            "phone": "Iltimos telefon raqamingizni kiritinf\nMisol uchun — +998991234567",
+            "name": "Iltimos ismingizni kiriting:\nMisol uchun: Ismoil",
+            "error_phone": "Iltimos telefon raqamni to'g'ri kiriting\nMisol uchun - +998991234567",
+            "error_name": "Iltimos isimni to'g'ri kiriting\nMisol uchun - Ismoil",
+            "confirmed_userinfo": "Ma'lumotlaringizni tasdiqlaysizmi?\n",
+            "conf_phone": "📞 Telefon raqamingiz: ",
+            "conf_name": "📝 Ismingiz: ",
+            "issue": "Iltimos shikoyatingizni yozing:",
+            "issue_received": "Xabaringiz muvaffaqiyatli yuborildi",
+            "error_issue": "Xabarni yuborishda xatolik",
+            "problem": "❗ Muammo: "
+      },
+      "buttons": {
+          "contact": "📞 Contactni jo'natish",
+          "back": "⬅️ Orqaga",
+          "confirm": "✅ Tasdiqlash",
+          "rejected": "❌ Bekor qilish"
+      }
+    },
+  "\uD83C\uDDF7\uD83C\uDDFA ru": {
+      "message_text": {
+            "phone": "Пожалуйста, введите ваш номер телефона:\nНапример: +998991234567",
+            "name": "Пожалуйста, введите ваше имя:\nНапример: Исмоил",
+            "error_phone": "Пожалуйста, введите номер телефона правильно\nНапример: +998991234567",
+            "error_name": "Пожалуйста, введите имя правильно\nНапример: Исмоил",
+            "confirmed_userinfo": "Подтверждаете ли вы свои данные?\n",
+            "conf_phone": "📞 Ваш номер телефона: ",
+            "conf_name": "📝 Ваше имя: ",
+            "issue": "Пожалуйста, опишите вашу жалобу:",
+            "issue_received": "Ваше сообщение успешно отправлено",
+            "error_issue": "Ошибка при отправке сообщения",
+            "problem": "❗ Проблема: "
+        },
+        "buttons": {
+            "contact": "📞 Отправить контакт",
+            "back": "⬅️ Назад",
+            "confirm": "✅ Подтвердить",
+            "rejected": "❌ Отменить"
+        }
+  },
+  "\uD83C\uDDFA\uD83C\uDDF8 eng": {
+      "message_text": {
+            "phone": "Please enter your phone number:\nFor example: +998991234567",
+            "name": "Please enter your name:\nFor example: Ismoil",
+            "error_phone": "Please enter the phone number correctly\nFor example: +998991234567",
+            "error_name": "Please enter the name correctly\nFor example: Ismoil",
+            "confirmed_userinfo": "Do you confirm your information?\n",
+            "conf_phone": "📞 Your phone number: ",
+            "conf_name": "📝 Your name: ",
+            "issue": "Please describe your complaint:",
+            "issue_received": "Your message was sent successfully",
+            "error_issue": "Error sending the message",
+            "problem": "❗ Problem: "
+        },
+        "buttons": {
+            "contact": "📞 Send contact",
+            "back": "⬅️ Back",
+            "confirm": "✅ Confirm",
+            "rejected": "❌ Cancel"
+        }
+  }
+}
