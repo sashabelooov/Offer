@@ -94,8 +94,8 @@ async def conf(message: Message, state: FSMContext):
      lang = data['language']
      msg_text = (
          f"{get_text(lang, 'message_text', 'confirmed_userinfo')}\n"
-         f"{get_text(lang, 'message_text', 'conf_phone')} {data["phone"]}\n"
-         f"{get_text(lang, 'message_text', 'conf_name')} {data["user_name"]}\n"
+         f"{get_text(lang, 'message_text', 'conf_phone')} {data['phone']}\n"
+         f"{get_text(lang, 'message_text', 'conf_name')} {data['user_name']}\n"
          f"{get_text(lang, 'message_text', 'problem')} {message.text}"
      )
 
