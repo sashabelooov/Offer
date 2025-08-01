@@ -38,3 +38,10 @@ def back(lang):
                  KeyboardButton(text=get_text(lang, 'buttons', 'back')))
     keyboard.adjust(1)
     return keyboard.as_markup(resize_keyboard=True)
+
+
+def issue_or_offer(lang):
+    keyboard = ReplyKeyboardBuilder()
+    keyboard.add(KeyboardButton(text=get_text(lang, 'buttons', 'issue')), KeyboardButton(text=get_text(lang, 'buttons', 'offer')))
+    keyboard.adjust(2)
+    return keyboard.as_markup(resize_keyboard=True)

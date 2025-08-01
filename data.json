@@ -12,13 +12,17 @@
             "issue": "Iltimos shikoyatingizni yozing:",
             "issue_received": "Xabaringiz muvaffaqiyatli yuborildi",
             "error_issue": "Xabarni yuborishda xatolik",
-            "problem": "❗ Muammo: "
+            "problem": "❗ Muammo yoki Taklif: ",
+            "issue_or_offer": "Shikoyat yoki takliflaringiz bo'lsa tugmalardan birini tanlang",
+            "offer": "Iltimos taklifingizni yozing:"
       },
       "buttons": {
           "contact": "📞 Contactni jo'natish",
           "back": "⬅️ Orqaga",
           "confirm": "✅ Tasdiqlash",
-          "rejected": "❌ Bekor qilish"
+          "rejected": "❌ Bekor qilish",
+          "issue": "\uD83D\uDCDD Shikoyat",
+          "offer": "\uD83D\uDCA1 Taklif"
       }
     },
   "\uD83C\uDDF7\uD83C\uDDFA ru": {
@@ -33,13 +37,17 @@
             "issue": "Пожалуйста, опишите вашу жалобу:",
             "issue_received": "Ваше сообщение успешно отправлено",
             "error_issue": "Ошибка при отправке сообщения",
-            "problem": "❗ Проблема: "
-        },
+            "problem": "❗ Проблема или предложение: ",
+            "issue_or_offer": "Если у вас есть жалоба или предложение, выберите одну из кнопок",
+            "offer": "Пожалуйста, напишите ваше предложение:"
+      },
         "buttons": {
             "contact": "📞 Отправить контакт",
             "back": "⬅️ Назад",
             "confirm": "✅ Подтвердить",
-            "rejected": "❌ Отменить"
+            "rejected": "❌ Отменить",
+            "issue": "\uD83D\uDCDD Жалоба",
+            "offer": "\uD83D\uDCA1 Предложение"
         }
   },
   "\uD83C\uDDFA\uD83C\uDDF8 eng": {
@@ -54,13 +62,19 @@
             "issue": "Please describe your complaint:",
             "issue_received": "Your message was sent successfully",
             "error_issue": "Error sending the message",
-            "problem": "❗ Problem: "
+            "problem": "❗ Problem or offer: ",
+            "issue_or_offer": "If you have a complaint or suggestion, select one of the buttons",
+            "offer": "Please write your suggestion:"
+
+
         },
         "buttons": {
             "contact": "📞 Send contact",
             "back": "⬅️ Back",
             "confirm": "✅ Confirm",
-            "rejected": "❌ Cancel"
+            "rejected": "❌ Cancel",
+            "issue": "\uD83D\uDCDD Жалоба",
+            "offer": "\uD83D\uDCA1 Suggestion"
         }
   }
 }

@@ -7,3 +7,4 @@ class UserState(StatesGroup):
     fio = State()
     conf = State()
     issue = State()
+    issue_or_offer = State()
