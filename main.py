@@ -6,6 +6,8 @@ from aiogram.types import ReplyKeyboardRemove
 from decouple import config
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from oauth2client.service_account import ServiceAccountCredentials
+import gspread
 
 # local modules
 from state import UserState
@@ -82,26 +84,20 @@ async def fio_user(message: Message, state: FSMContext):
             break
     if ok:
         await state.update_data(user_name=message.text)
-        await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'issue_or_offer'),
-                               reply_markup=kb.issue_or_offer(lang))
-        await state.set_state(UserState.issue_or_offer)
-
-
-@router.message(UserState.issue_or_offer)
-async def issue_or_offer(message: Message, state: FSMContext):
-    user_id = message.from_user.id
-    data = await state.get_data()
-    lang = data['language']
-    if message.text == get_text(lang, "buttons", "issue"):
         await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'issue'),
                                reply_markup=ReplyKeyboardRemove())
-        await state.update_data(problem_or_offer=message.text)
         await state.set_state(UserState.issue)
-    elif message.text == get_text(lang, "buttons", "offer"):
-        await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'offer'),
-                               reply_markup=ReplyKeyboardRemove())
-        await state.update_data(problem_or_offer=message.text)
-        await state.set_state(UserState.issue)
+
+
+# @router.message(UserState.issue_or_offer)
+# async def issue_or_offer(message: Message, state: FSMContext):
+#     user_id = message.from_user.id
+#     data = await state.get_data()
+#     lang = data['language']
+#     await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'issue'),
+#                            reply_markup=ReplyKeyboardRemove())
+#     await state.update_data(problem=message.text)
+#     await state.set_state(UserState.issue)
 
 
 
@@ -129,15 +125,11 @@ async def conf(message: Message, state: FSMContext):
     data = await state.get_data()
     lang = data['language']
     if message.text == get_text(lang, "buttons", "confirm"):
-        from oauth2client.service_account import ServiceAccountCredentials
-        import gspread
+
         phone = data["phone"]
         name = data["user_name"]
         user_problem = data["problem"]
-        issue_or_offers = data["problem_or_offer"]
-
-        shikoyat = user_problem if "📝" in issue_or_offers else "—"
-        taklif = user_problem if "💡" in issue_or_offers else "—"
+        taklif =  "—"
 
 
 
@@ -145,7 +137,7 @@ async def conf(message: Message, state: FSMContext):
             "https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/drive"
         ]
-        creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name("creds_example.json", scope)
         client = gspread.authorize(creds)
 
         sheet = client.open("Volna_Shikoyatlar_Takliflar").sheet1
@@ -155,7 +147,7 @@ async def conf(message: Message, state: FSMContext):
         sana = hozir.strftime("%Y-%m-%d")  # '2025-07-31' formatida
         vaqt = hozir.strftime("%H:%M:%S")  # '15:56:22' formatida
 
-        row = [url, phone, name, shikoyat, taklif, sana, vaqt]
+        row = [url, phone, name, user_problem, taklif, sana, vaqt]
         sheet.append_row(row)
 
 
