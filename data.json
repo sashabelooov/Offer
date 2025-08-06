@@ -1,5 +1,5 @@
 {
-    "start": "Hello! 👋 Welcome to our Support Bot.\nYou can send your issues here, and we will process them as soon as possible.\n\nAssalomu alaykum! 👋 Bu muammolaringizni qabul qiluvchi bot.\nMuammoingizni yozing, biz uni tezda ko‘rib chiqamiz.\n\nЗдравствуйте! 👋 Это бот для приема ваших обращений.\nОпишите свою проблему, и мы рассмотрим ее как можно скорее.",
+    "start": "👋 Hello and welcome to the official Volna Support Bot!\n\nIf you're experiencing any issues or have suggestions, just send us a message here — we're here to help you as quickly as possible.\n\n———\n\n👋 Assalomu alaykum, bu Volna'ning rasmiy muammolarni qabul qiluvchi botidir.\nAgar sizda muammo yoki taklif bo‘lsa, shu yerga yozing. Biz imkon qadar tezroq javob beramiz.\n\n———\n\n👋 Здравствуйте! Вы обратились в официальный бот поддержки Volna.\nЕсли у вас есть проблема или предложение, просто напишите нам здесь. Мы постараемся ответить вам как можно скорее.",
     "\uD83C\uDDFA\uD83C\uDDFF uz":{
           "message_text": {
             "phone": "Iltimos telefon raqamingizni kiritinf\nMisol uchun — +998991234567",
@@ -20,9 +20,7 @@
           "contact": "📞 Contactni jo'natish",
           "back": "⬅️ Orqaga",
           "confirm": "✅ Tasdiqlash",
-          "rejected": "❌ Bekor qilish",
-          "issue": "\uD83D\uDCDD Shikoyat",
-          "offer": "\uD83D\uDCA1 Taklif"
+          "rejected": "❌ Bekor qilish"
       }
     },
   "\uD83C\uDDF7\uD83C\uDDFA ru": {
@@ -37,7 +35,7 @@
             "issue": "Пожалуйста, опишите вашу жалобу:",
             "issue_received": "Ваше сообщение успешно отправлено",
             "error_issue": "Ошибка при отправке сообщения",
-            "problem": "❗ Проблема или предложение: ",
+            "problem": "❗ Проблема: ",
             "issue_or_offer": "Если у вас есть жалоба или предложение, выберите одну из кнопок",
             "offer": "Пожалуйста, напишите ваше предложение:"
       },
@@ -45,9 +43,7 @@
             "contact": "📞 Отправить контакт",
             "back": "⬅️ Назад",
             "confirm": "✅ Подтвердить",
-            "rejected": "❌ Отменить",
-            "issue": "\uD83D\uDCDD Жалоба",
-            "offer": "\uD83D\uDCA1 Предложение"
+            "rejected": "❌ Отменить"
         }
   },
   "\uD83C\uDDFA\uD83C\uDDF8 eng": {
@@ -62,7 +58,7 @@
             "issue": "Please describe your complaint:",
             "issue_received": "Your message was sent successfully",
             "error_issue": "Error sending the message",
-            "problem": "❗ Problem or offer: ",
+            "problem": "❗ Problem: ",
             "issue_or_offer": "If you have a complaint or suggestion, select one of the buttons",
             "offer": "Please write your suggestion:"
 
@@ -72,9 +68,7 @@
             "contact": "📞 Send contact",
             "back": "⬅️ Back",
             "confirm": "✅ Confirm",
-            "rejected": "❌ Cancel",
-            "issue": "\uD83D\uDCDD Issue",
-            "offer": "\uD83D\uDCA1 Suggestion"
+            "rejected": "❌ Cancel"
         }
   }
 }

@@ -89,16 +89,6 @@ async def fio_user(message: Message, state: FSMContext):
         await state.set_state(UserState.issue)
 
 
-# @router.message(UserState.issue_or_offer)
-# async def issue_or_offer(message: Message, state: FSMContext):
-#     user_id = message.from_user.id
-#     data = await state.get_data()
-#     lang = data['language']
-#     await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'issue'),
-#                            reply_markup=ReplyKeyboardRemove())
-#     await state.update_data(problem=message.text)
-#     await state.set_state(UserState.issue)
-
 
 
 
