@@ -84,7 +84,7 @@ async def fio_user(message: Message, state: FSMContext):
             break
     if ok:
         await state.update_data(user_name=message.text)
-        await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'issue'),
+        await bot.send_message(chat_id=user_id, text=get_text(lang, 'message_text', 'offer'),
                                reply_markup=ReplyKeyboardRemove())
         await state.set_state(UserState.issue)
 
@@ -101,10 +101,10 @@ async def issue(message: Message, state: FSMContext):
         f"{get_text(lang, 'message_text', 'confirmed_userinfo')}\n"
         f"{get_text(lang, 'message_text', 'conf_phone')} {data['phone']}\n"
         f"{get_text(lang, 'message_text', 'conf_name')} {data['user_name']}\n"
-        f"{get_text(lang, 'message_text', 'problem')} {message.text}"
+        f"{get_text(lang, 'message_text', 'offer_conf')} {message.text}"
     )
 
-    await state.update_data(problem=message.text)
+    await state.update_data(offer=message.text)
     await message.answer(text=msg_text, reply_markup=kb.conf(lang))
     await state.set_state(UserState.conf)
 
@@ -118,8 +118,8 @@ async def conf(message: Message, state: FSMContext):
 
         phone = data["phone"]
         name = data["user_name"]
-        user_problem = data["problem"]
-        taklif =  "—"
+        user_problem = "—"
+        taklif = data["offer"]
 
 
 
